@@ -1,15 +1,15 @@
 <!doctype html> teste
 <html lang="pt-BR" data-bs-theme="auto">
 <head>
-<script src="js/color-modes.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
-<meta name="generator" content="Hugo 0.122.0">
-<title>TurmaTec - headers</title>
+<title>TurmaTec - Login</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/color-modes.js"></script>
+<link href="css/sign-in.css" rel="stylesheet">	
 <style>
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -173,6 +173,7 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+		<li><a href="criar-conta.html" class="nav-link px-2 link-secondary00">Criar Conta</a></li>
           <li><a href="pagina.inicial.html" class="nav-link px-2 link-secondary00">Página Inicial</a></li>
           <li><a href="criar-grade.html" class="nav-link px-2 link-body-emphasis">Criar nova grade</a></li>
           <li><a href="vizualizar-grades.html" class="nav-link px-2 link-body-emphasis">Visualizar Grades</a></li>
@@ -184,12 +185,16 @@
         </form>
         <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
           <ul class="dropdown-menu text-small">
+			  <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
             <li><a class="dropdown-item" href="editar-perfil.html">Editar Perfil</a></li>
             <li><a class="dropdown-item" href="configuracoes.html">Configurações</a></li>
+			  <li><a class="dropdown-item" href="login.html">Login</a></li>
+			   <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+			  <li><a class="dropdown-item" href="recuperar-conta.html">Recuperar Conta</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="sair-conta.html">Sair da conta</a></li>
+            <li><a class="dropdown-item" href="logout.html">Sair da conta</a></li>
           </ul>
         </div>
       </div>
@@ -240,16 +245,41 @@
       <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
       </form>
       <div class="text-end">
-        <button type="button" class="btn btn-light text-dark me-2">Entrar na conta</button>
+        <a href="login.html"><button type="button" class="btn btn-light text-dark me-2">Entrar na conta</button></a>
+		 <a href="logout.html"> 
         <button type="button" class="btn btn-primary">Sair da conta</button>
+		  </a>
       </div>
     </div>
   </div>
 	<!--  -->
 </main>
-		<!-- inicio pagina -->
-	
+<!-- inicio pagina -->
+<!-- Pagina Login-->	
+<main class="form-signin w-100 m-auto">
+  <form id="login-form">
+    <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Faça seu login</h1>
 
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput username" placeholder="digite seu email">
+      <label for="floatingInput">E-mail</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword password" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+	  <a href="logout.html"> Esqueci a senha</a>
+      </label>
+    </div>
+     <a href="pagina-inicial.html"> <button class="btn btn-primary w-100 py-2 " type="submit" id="login-btn">Entrar</button></a>
+   
+  </form>
+</main>
 	
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
