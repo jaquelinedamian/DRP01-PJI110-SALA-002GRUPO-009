@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="pt-BR" data-bs-theme="auto">
 <head>
-<script src="js/color-modes.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
-<meta name="generator" content="Hugo 0.122.0">
-<title>TurmaTec - headers</title>
+<title>TurmaTec - Criar Grade</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/color-modes.js"></script>
 <style>
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -173,7 +172,8 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="pagina.inicial.html" class="nav-link px-2 link-secondary00">Página Inicial</a></li>
+          <li><a href="cadastro.html" class="nav-link px-2 link-secondary00">Criar Conta</a></li>
+          <li><a href="pagina-inicial.html" class="nav-link px-2 link-secondary00">Página Inicial</a></li>
           <li><a href="criar-grade.html" class="nav-link px-2 link-body-emphasis">Criar nova grade</a></li>
           <li><a href="vizualizar-grades.html" class="nav-link px-2 link-body-emphasis">Visualizar Grades</a></li>
           <li><a href="grades-arquivadas.html" class="nav-link px-2 link-body-emphasis">Grades Arquivadas</a></li>
@@ -184,12 +184,16 @@
         </form>
         <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
           <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
             <li><a class="dropdown-item" href="editar-perfil.html">Editar Perfil</a></li>
             <li><a class="dropdown-item" href="configuracoes.html">Configurações</a></li>
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+            <li><a class="dropdown-item" href="recuperar-conta.html">Recuperar Conta</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="sair-conta.html">Sair da conta</a></li>
+            <li><a class="dropdown-item" href="logout.html">Sair da conta</a></li>
           </ul>
         </div>
       </div>
@@ -205,7 +209,7 @@
           </svg>
           </a>
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li> <a href="pagina-inicial.html" class="nav-link text-secondary">
+            <li> <a href="pagina-inicial.html" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                 <use xlink:href="#home"/>
               </svg>
@@ -239,18 +243,345 @@
     <div class="container d-flex flex-wrap justify-content-center">
       <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
       </form>
-      <div class="text-end">
+      <div class="text-end"> <a href="login.html">
         <button type="button" class="btn btn-light text-dark me-2">Entrar na conta</button>
+        </a> <a href="logout.html">
         <button type="button" class="btn btn-primary">Sair da conta</button>
-      </div>
+        </a> </div>
     </div>
   </div>
-	<!--  -->
+  <!--  --> 
 </main>
-		<!-- inicio pagina -->
-	
+<!-- inicio pagina -->
 
+<div class="container">
+  <h2>Grades horárias Cadastradas</h2>
+  <table width="100%" border="0" class="table table-striped">
+    <tbody>
+      <tr scope="row">
+        <td>ID</td>
+        <td>Nome da Grade</td>
+        <td>Data de Criação</td>
+        <td>Opções</td>
+      </tr>
+      <tr scope="row">
+        <td>1</td>
+        <td>Grade 1</td>
+        <td>20/20/2024</td>
+        <td><a href="#">Visualizar </a> <a href="#">Editar</a> <a href="#">Duplicar</a> <a href="#">Excluir</a></td>
+      </tr>
+      <tr scope="row">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr scope="row">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <nav class="align-items-center">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+    </ul>
+  </nav>
+</div>
+<br>
+<br>
+<div class="container">
+<h2>Criar Grade Horária</h2>
+<p>Crie sua grade horária aqui</p>
+<div class="container">
+<form>
+<div class="row">
+<div class="form-group">
+<h3>Nome da Grade</h3>
+<input type="text" class="form-control" id="ngrade" aria-placeholder="Digite o nome da grade">
+<br>
+<section class="turma">
+<div class="container">
+<h3>Selecione as turmas</h3>
+<div class="form-switch">
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="allturnas">
+    <label class="form-check-label" for="allturnas">Todas as turmas </label>
+  </div>
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="turma1">
+    <label class="form-check-label" for="turma1">Turma 1</label>
+  </div>
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="turma2">
+    <label class="form-check-label" for="turma2">Turma 2</label>
+  </div>
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="turma3">
+    <label class="form-check-label " for="turma3">Turma 3</label>
+  </div>
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="turma4"  >
+    <label class="form-check-label " for="turma4">Turma 4</label>
+  </div>
+  <div class="turmas">
+    <input class="form-check-input" type="checkbox" role="switch" id="turma5"  >
+    <label class="form-check-label " for="turma5">Turma 5</label>
+  </div>
+</div>
+<!-- fecha container -->
+</section>
+<section class="professores">
+<div class="container">
+<h3>Selecione os Professores</h3>
+<div class="form-switch">
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="allprofessores">
+    <label class="form-check-label" for="allturnas">Todas os professores</label>
+  </div>
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="professor1">
+    <label class="form-check-label" for="turma1">Professores 1</label>
+  </div>
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="professor2">
+    <label class="form-check-label" for="professor2">Professores 2</label>
+  </div>
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="professor">
+    <label class="form-check-label " for="professor2">Professores 3</label>
+  </div>
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="professor4"  >
+    <label class="form-check-label " for="professor4">Professores 4</label>
+  </div>
+  <div class="professores">
+    <input class="form-check-input" type="checkbox" role="switch" id="professor5"  >
+    <label class="form-check-label " for="professor5">Professores 5</label>
+  </div>
+</div>
+	</div>
+<!-- fecha container -->
+</section>
 	
+<section class="horarios">
+<input class="form-check-input" type="checkbox" role="switch" id="allhour"  >
+<label class="form-check-label" for="allhour">Todos os horários</label>
+
+<!-- segunda -->
+<div class="segunda">
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="segunda">
+  <label class="form-check-label" for="horario1seg"> Segunda </label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="horario1seg"  >
+  <label class="form-check-label" for="horario1seg">Horario 1</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="horario2seg"  >
+  <label class="form-check-label" for="horario2seg">Horario 2</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="horario3seg"  >
+  <label class="form-check-label" for="horario3seg">Horario 3</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="horario4seg"  >
+  <label class="form-check-label" for="horario4seg">Horario 4</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="horario5seg"  >
+  <label class="form-check-label" for="horario5seg">Horario 5</label>
+</div>
+</div>
+	
+<div class="terca col alert alert-primary"> 
+  <!-- Terca -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault"> Terça </label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1ter"  >
+    <label class="form-check-label" for="horario1ter">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2"  >
+    <label class="form-check-label" for="horario2">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3ter"  >
+    <label class="form-check-label" for="horario3ter">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4ter"  >
+    <label class="form-check-label" for="horario4ter">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5ter"  >
+    <label class="form-check-label" for="horario5ter">Horario 5</label>
+  </div>
+</div>
+<div class="quarta col alert alert-warning"> 
+  <!-- quarta -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="quarta">
+    <label class="form-check-label" for="quarta"> Quarta </label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1qua"  >
+    <label class="form-check-label" for="horario1qua">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2qua"  >
+    <label class="form-check-label" for="horario2qua">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3qua"  >
+    <label class="form-check-label" for="horario3qua">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4qua"  >
+    <label class="form-check-label" for="horario4qua">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5qua"  >
+    <label class="form-check-label" for="horario5qua">Horario 5</label>
+  </div>
+</div>
+<div class="quinta col alert alert-info"> 
+  <!-- quinta -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="quinta">
+    <label class="form-check-label" for="quinta"> Quinta</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1qui"  >
+    <label class="form-check-label" for="horario1qui">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2qui"  >
+    <label class="form-check-label" for="horario2qui">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3qui"  >
+    <label class="form-check-label" for="horario3qui">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4qui"  >
+    <label class="form-check-label" for="horario4qui">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5qui"  >
+    <label class="form-check-label" for="horario5qui">Horario 5</label>
+  </div>
+</div>
+<div class="sexta col alert alert-warning"> 
+  <!-- Sexta -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="sexta">
+    <label class="form-check-label" for="sexta"> Sexta </label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1sex"  >
+    <label class="form-check-label" for="horario1sex">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2sex"  >
+    <label class="form-check-label" for="horario2sex">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3sex"  >
+    <label class="form-check-label" for="horario3sex">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4sex"  >
+    <label class="form-check-label" for="horario4sex">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5sex"  >
+    <label class="form-check-label" for="horario5sex">Horario 5</label>
+  </div>
+</div>
+<div class="sabado col alert alert-light"> 
+  <!-- Sabado -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="sabado">
+    <label class="form-check-label" for="sabado"> Sabado </label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1sab"  >
+    <label class="form-check-label" for="horario1sab">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2sab"  >
+    <label class="form-check-label" for="horario2sab">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3sab"  >
+    <label class="form-check-label" for="horario3sab">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4sab"  >
+    <label class="form-check-label" for="horario4sag">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5sab"  >
+    <label class="form-check-label" for="horario5sab">Horario 5</label>
+  </div>
+</div>
+<div class="domingo col alert alert-light"> 
+  <!-- Domingo -->
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="domingo">
+    <label class="form-check-label" for="domingo"> Domingo </label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario1dom"  >
+    <label class="form-check-label" for="horario1dom">Horario 1</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario2dom"  >
+    <label class="form-check-label" for="horario2dom">Horario 2</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario3dom"  >
+    <label class="form-check-label" for="horario3dom">Horario 3</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario4dom"  >
+    <label class="form-check-label" for="horario4dom">Horario 4</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="horario5dom"  >
+    <label class="form-check-label" for="horario5dom">Horario 5</label>
+  </div>
+</div>
+</div>
+<br>
+<div class="form-group">
+  <label for="anexarfoto">Anexar Foto</label>
+  <input type="file" class="form-control-file" id="anexarfoto">
+</div>
+<br>
+<button type="submit" class="btn btn-primary mb-2">Salvar</button>
+<p>Professor cadastrado com sucesso!</p>
+</form>
+</div>
+</div>
+<!-- fim form --> 
+
+<!-- fim pagina --> 
+
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
