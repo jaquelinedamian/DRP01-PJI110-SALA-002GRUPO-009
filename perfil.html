@@ -6,7 +6,7 @@
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>TurmaTec - Cadastro</title>
+<title>TurmaTec - Perfil</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
@@ -161,29 +161,30 @@
 <!-- inicio pagina --> 
 <!-- Inicio Pagina Cadastro -->
 	<br>
-	<div class="pgcadastro">
+	<div class="pgperfil">
 <div class="container">
-	<h1>Cadastro</h1>
+	<h1>Perfil</h1>
   <form>
+	  <img src="https://github.com/mdo.png" alt="mdo" width="100" height="100" class="rounded-circle"> 
+	  <br>
     <div class="mb-3">
-      <label class="form-label">Digite seu nome</label>
-      <input class="form-control" type="text" placeholder="">
+		<br>
+		<div class="input-group input-group-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Nome</span>
+	<input class="form-control" type="text" value="Manuel da Silva" aria-label="" disabled readonly>
+
+</div>
+		<br>
+				<div class="input-group input-group-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">E-mail</span>
+	<input class="form-control" type="text" value="manuel@email.com.br" aria-label="" disabled readonly>
+
+</div>
+		
 	  </div>
-		 <div class="mb-3">
-      <label class="form-label">Digite seu e-mail</label>
-      <input type="email" class="form-control" >
-      <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Digite sua senha</label>
-      <input type="password" class="form-control" id="password">
-    </div>
-	  <div class="mb-3">
-	 <label for="anexarfoto">Foto de Perfil</label>
-        <input type="file" class="form-control-file" id="anexarfoto">
-    </div>
-	  <a href="pagina-inicial.html">
-    <button type="button" class="btn btn-primary">Cadastrar</button>
+	
+	  <a href="#">
+    <button type="button" class="btn btn-primary">Editar</button>
 	  </a>
   </form>
 </div>

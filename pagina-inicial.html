@@ -1,89 +1,20 @@
 <!doctype html>
 <html lang="pt-BR" data-bs-theme="auto">
 <head>
-<script src="js/color-modes.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
-<meta name="generator" content="Hugo 0.122.0">
-<title>TurmaTec - headers</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>TurmaTec - Pagina Inicial</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<style>
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-@media (min-width: 768px) {
-.bd-placeholder-img-lg {
-    font-size: 3.5rem;
-}
-}
-.b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-}
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-}
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-}
-.nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-}
-.btn-bd-primary {
---bd-violet-bg: #712cf9;
---bd-violet-rgb: 112.520718, 44.062154, 249.437846;
---bs-btn-font-weight: 600;
---bs-btn-color: var(--bs-white);
---bs-btn-bg: var(--bd-violet-bg);
---bs-btn-border-color: var(--bd-violet-bg);
---bs-btn-hover-color: var(--bs-white);
---bs-btn-hover-bg: #6528e0;
---bs-btn-hover-border-color: #6528e0;
---bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
---bs-btn-active-color: var(--bs-btn-hover-color);
---bs-btn-active-bg: #5a23c8;
---bs-btn-active-border-color: #5a23c8;
-}
-.bd-mode-toggle {
-    z-index: 1500;
-}
-.bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-}
-</style>
-
-<!-- inicio -->
+<link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
+<script src="js/color-modes.js"></script> 
+<!-- inicio -->
 </head>
-<body>
+<body class="gerargrade">
 <!-- Acessibilidade cores -->
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="check2" viewBox="0 0 16 16">
@@ -168,95 +99,1442 @@
   </symbol>
 </svg>
 <main> 
-  <!-- Header com perfil e busca-->
-  <header class="p-3 mb-3 border-bottom">
+  
+  <!-- header icones -->
+  
+  <header class="border-bottom text-bg-dark menuicon">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="cadastro.html" class="nav-link px-2 link-secondary00">Criar Conta</a></li>
-          <li><a href="pagina-inicial.html" class="nav-link px-2 link-secondary00">Página Inicial</a></li>
-          <li><a href="criar-grade.html" class="nav-link px-2 link-body-emphasis">Criar nova grade</a></li>
-          <li><a href="vizualizar-grades.html" class="nav-link px-2 link-body-emphasis">Visualizar Grades</a></li>
-          <li><a href="grades-arquivadas.html" class="nav-link px-2 link-body-emphasis">Grades Arquivadas</a></li>
-          <li><a href="grades-excluidas.html" class="nav-link px-2 link-body-emphasis">Grades Excluidas</a></li>
-        </ul>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
-        </form>
-        <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
-          <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
-            <li><a class="dropdown-item" href="editar-perfil.html">Editar Perfil</a></li>
-            <li><a class="dropdown-item" href="configuracoes.html">Configurações</a></li>
-            <li><a class="dropdown-item" href="login.html">Login</a></li>
-            <li><a class="dropdown-item" href="logout.html">Logout</a></li>
-            <li><a class="dropdown-item" href="recuperar-conta.html">Recuperar Conta</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="logout.html">Sair da conta</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- header icones -->
-  <header>
-    <div class="px-3 py-2 text-bg-dark border-bottom">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-            <use xlink:href="#bootstrap"/>
+        <div class="col-12 col-sm-12 col-xl-2"> <a href="index.html" class="text-decoration-none nav-link text-white">
+          <button><img src="images/logobranco.svg" alt="logo" width="150" > </button>
+          </a> </div>
+        <div class="col-6 col-sm-6 col-xl-2"> <a href="pagina-inicial.html" class="nav-link text-white">
+          <button>
+          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+            <use xlink:href="#home"/>
           </svg>
-          </a>
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li> <a href="pagina-inicial.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#home"/>
-              </svg>
-              Página inicial </a> </li>
-            <li> <a href="pagina-inicial.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#speedometer2"/>
-              </svg>
-              Gerar Grade Horária </a> </li>
-            <li> <a href="gerar-grade.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table"/>
-              </svg>
-              Cadastrar Grades </a> </li>
-            <li> <a href="cadastrar-turma.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#grid"/>
-              </svg>
-              Cadastrar Turmas </a> </li>
-            <li> <a href="cadastrar-professores.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#people-circle"/>
-              </svg>
-              Professores </a> </li>
-          </ul>
+          Página inicial </button>
+          </a> </div>
+        <div class="col-6 col-sm-6 col-xl-2"> <a href="grades-horarias.html" class="nav-link text-white">
+          <button>
+          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+            <use xlink:href="#grid"/>
+          </svg>
+          Grade Horária </button>
+          </a> </div>
+        <div class="col-6 col-sm-6 col-xl-2"> <a href="cadastrar-turma.html" class="nav-link text-white">
+          <button>
+          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+            <use xlink:href="#table"/>
+          </svg>
+          Cadastrar Turmas </button>
+          </a> </div>
+        <div class="col-6 col-sm-6 col-xl-2"> <a href="cadastrar-professores.html" class="nav-link text-white">
+          <button>
+          <svg class="bi d-block mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+          <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
+          <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
+          </svg>
+          Cadastrar Professores </button>
+          </a> </div>
+        <div class="col-12 col-sm-12 col-xl-2">
+          <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
+            <ul class="dropdown-menu text-large">
+              <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
+              <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="faq.html">Precisa de Ajuda?</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="pagina-inicial.html">Pagina Inicial</a></li>
+              <li><a class="dropdown-item" href="grades-horarias.html">Grades Horárias</a></li>
+              <li><a class="dropdown-item" href="cadastrar-professores.html">Cadastro Professores</a></li>
+              <li><a class="dropdown-item" href="cadastrar-turma.html">Cadastro Turma</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </header>
-  <div class="px-3 py-2 border-bottom mb-3">
-    <div class="container d-flex flex-wrap justify-content-center">
-      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-      </form>
-      <div class="text-end"> <a href="login.html">
-        <button type="button" class="btn btn-light text-dark me-2">Entrar na conta</button>
-        </a> <a href="logout.html">
-        <button type="button" class="btn btn-primary">Sair da conta</button>
-        </a> </div>
-    </div>
-  </div>
+  
   <!--  --> 
 </main>
-		<!-- inicio pagina -->
-	
+<!-- inicio pagina --> 
+<br>
+<div class="pginicial"> 
+  
+  <!-- Grades Cadastradas -->
+  <div class="gc">
+    <div class="container">
+      <h2>Grades horárias Cadastradas</h2>
+      <table width="100%" border="0" class="table table-striped">
+        <tbody>
+          <tr scope="row">
+            <td>ID</td>
+            <td>Nome da Grade</td>
+            <td>Data de Criação</td>
+            <td>Opções</td>
+          </tr>
+          <tr scope="row">
+            <td>1</td>
+            <td>Grade 1</td>
+            <td>20/20/2024</td>
+            <td><a href="#">Editar</a> <a href="#">Duplicar</a> <a href="#">Excluir</a> <a href="#">Salvar</a> <a href="#">Imprimir</a><!-- modal tabela --> 
+              <!-- Button trigger modal -->
+              
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button>
+              
+              <!-- Modal -->
+              
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <table width="100%" border="0">
+                        <tbody>
+                          <tr>
+                            <td>Horáio</td>
+                            <td>Segunda</td>
+                            <td>Terça</td>
+                            <td>Quarta</td>
+                            <td>Quinta</td>
+                            <td>Sexta</td>
+                          </tr>
+                          <tr>
+                            <td><select>
+                                <option selected>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>16:00</option>
+                                <option>17:00</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                                <option>23:00</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td><select>
+                                <option selected>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>16:00</option>
+                                <option>17:00</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                                <option>23:00</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td>Interlalo</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><select>
+                                <option selected>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>16:00</option>
+                                <option>17:00</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                                <option>23:00</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td><select>
+                                <option selected>08:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>14:00</option>
+                                <option>15:00</option>
+                                <option>16:00</option>
+                                <option>17:00</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                                <option>23:00</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                            <td><select>
+                                <option selected>Professor 1</option>
+                                <option>Professor 2</option>
+                                <option>Professor 3</option>
+                                <option>Professor 4</option>
+                                <option>Professor 5</option>
+                              </select>
+                              <select>
+                                <option selected>Turma 1</option>
+                                <option>Turma 2</option>
+                                <option>Turma 3</option>
+                                <option>Turma 4</option>
+                                <option>Turma 5</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">Editar</button>
+                      <button type="button" class="btn btn-primary">Salvar</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Fim modal tabela --></td>
+          </tr>
+          <tr scope="row">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr scope="row">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <nav class="align-items-center">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Fim Grades Cadastradas --> 
+  
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col"> 
+        <!-- Turmas Cadastradas -->
+        <div class="tc">
+          <div class="container">
+            <h2>Turmas Cadastradas</h2>
+            <table width="100%" border="0" class="table table-striped">
+              <tbody>
+                <tr scope="row">
+                  <td>ID</td>
+                  <td>Nome da Turma</td>
+                  <td>Data de Criação</td>
+                  <td>Opções</td>
+                </tr>
+                <tr scope="row">
+                  <td>1</td>
+                  <td>Truma 1</td>
+                  <td>20/20/2024</td>
+                  <td><a href="#">Editar</a> <a href="#">Duplicar</a> <a href="#">Excluir</a> <a href="#">Salvar</a> <a href="#">Imprimir</a><!-- modal tabela --> 
+                    <!-- Button trigger modal -->
+                    
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button>
+                    
+                    <!-- Modal -->
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table width="100%" border="0">
+                              <tbody>
+                                <tr>
+                                  <td>Horáio</td>
+                                  <td>Segunda</td>
+                                  <td>Terça</td>
+                                  <td>Quarta</td>
+                                  <td>Quinta</td>
+                                  <td>Sexta</td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td>Interlalo</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Editar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Fim modal tabela --></td>
+                </tr>
+                <tr scope="row">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr scope="row">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="container">
+            <nav class="align-items-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- Fim turmas Cadastradas --> 
+      </div>
+      <div class="col"> 
+        <!-- Professores Cadastrados -->
+        <div class="pc">
+          <div class="container">
+            <h2>Professores Cadastrados</h2>
+            <table width="100%" border="0" class="table table-striped">
+              <tbody>
+                <tr scope="row">
+                  <td>ID</td>
+                  <td>Nome do Professor</td>
+                  <td>Data de Criação</td>
+                  <td>Opções</td>
+                </tr>
+                <tr scope="row">
+                  <td>1</td>
+                  <td>Professor 1</td>
+                  <td>20/20/2024</td>
+                  <td><a href="#">Editar</a> <a href="#">Duplicar</a> <a href="#">Excluir</a> <a href="#">Salvar</a> <a href="#">Imprimir</a><!-- modal tabela --> 
+                    <!-- Button trigger modal -->
+                    
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button>
+                    
+                    <!-- Modal -->
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table width="100%" border="0">
+                              <tbody>
+                                <tr>
+                                  <td>Horáio</td>
+                                  <td>Segunda</td>
+                                  <td>Terça</td>
+                                  <td>Quarta</td>
+                                  <td>Quinta</td>
+                                  <td>Sexta</td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td>Interlalo</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                  <td><select>
+                                      <option selected>08:00</option>
+                                      <option>09:00</option>
+                                      <option>10:00</option>
+                                      <option>11:00</option>
+                                      <option>12:00</option>
+                                      <option>13:00</option>
+                                      <option>14:00</option>
+                                      <option>15:00</option>
+                                      <option>16:00</option>
+                                      <option>17:00</option>
+                                      <option>18:00</option>
+                                      <option>19:00</option>
+                                      <option>20:00</option>
+                                      <option>21:00</option>
+                                      <option>22:00</option>
+                                      <option>23:00</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                  <td><select>
+                                      <option selected>Professor 1</option>
+                                      <option>Professor 2</option>
+                                      <option>Professor 3</option>
+                                      <option>Professor 4</option>
+                                      <option>Professor 5</option>
+                                    </select>
+                                    <select>
+                                      <option selected>Turma 1</option>
+                                      <option>Turma 2</option>
+                                      <option>Turma 3</option>
+                                      <option>Turma 4</option>
+                                      <option>Turma 5</option>
+                                    </select></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Editar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Fim modal tabela --></td>
+                </tr>
+                <tr scope="row">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr scope="row">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="container">
+            <nav class="align-items-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- Fim professores Cadastradas --> 
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+</div>
+<!-- fim form --> 
 
-	
+<!-- fim pagina --> 
+
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

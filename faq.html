@@ -6,14 +6,15 @@
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>TurmaTec - Cadastro</title>
+<title>TurmaTec - Faq</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
 <script src="js/color-modes.js"></script> 
+<!-- inicio -->
 </head>
-<body>
+<body class="gerargrade">
 <!-- Acessibilidade cores -->
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="check2" viewBox="0 0 16 16">
@@ -98,6 +99,7 @@
   </symbol>
 </svg>
 <main> 
+  
   <!-- header icones -->
   
   <header class="border-bottom text-bg-dark menuicon">
@@ -158,37 +160,54 @@
   
   <!--  --> 
 </main>
-<!-- inicio pagina --> 
-<!-- Inicio Pagina Cadastro -->
-	<br>
-	<div class="pgcadastro">
-<div class="container">
-	<h1>Cadastro</h1>
-  <form>
-    <div class="mb-3">
-      <label class="form-label">Digite seu nome</label>
-      <input class="form-control" type="text" placeholder="">
-	  </div>
-		 <div class="mb-3">
-      <label class="form-label">Digite seu e-mail</label>
-      <input type="email" class="form-control" >
-      <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+<!-- inicio pagina -->
+<br>
+	<div class="pg-grades">
+		<div class="container">
+			<br>
+			<h1>Você precisa de ajuda?</h1>
+			<p>Abaixo você encontra algumas resposta para as dúvidas mais comuns. </p>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Digite sua senha</label>
-      <input type="password" class="form-control" id="password">
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
     </div>
-	  <div class="mb-3">
-	 <label for="anexarfoto">Foto de Perfil</label>
-        <input type="file" class="form-control-file" id="anexarfoto">
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
     </div>
-	  <a href="pagina-inicial.html">
-    <button type="button" class="btn btn-primary">Cadastrar</button>
-	  </a>
-  </form>
+  </div>
 </div>
 </div>
-<!-- Fim Pagina Cadastro --> 
+<!-- fim pagina --> 
+
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
