@@ -6,894 +6,561 @@
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>TurmaTec - Grade Horária</title>
+<title>TurmaTec - Grades Horárias</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
+<link href="css/dashboard.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script> 
 <script src="js/color-modes.js"></script> 
-<!-- inicio -->
+<script src="js/form-selecao.js"></script>
 </head>
-<body class="gerargrade">
-<!-- Acessibilidade cores -->
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="check2" viewBox="0 0 16 16">
-    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-  </symbol>
-  <symbol id="circle-half" viewBox="0 0 16 16">
-    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-  </symbol>
-  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-  </symbol>
-  <symbol id="sun-fill" viewBox="0 0 16 16">
-    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-  </symbol>
-</svg>
-<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-  <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-  <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-    <use href="#circle-half"></use>
-  </svg>
-  <span class="visually-hidden" id="bd-theme-text">Escolha a cor</span> </button>
-  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-      <svg class="bi me-2 opacity-50" width="1em" height="1em">
-        <use href="#sun-fill"></use>
-      </svg>
-      Cores Claras
-      <svg class="bi ms-auto d-none" width="1em" height="1em">
-        <use href="#check2"></use>
-      </svg>
-      </button>
+<body class="pg">
+<header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img src="images/logobranco.svg" alt=""/></a>
+  <ul class="navbar-nav flex-row d-md-none">
+    <li class="nav-item text-nowrap">
+      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search"> </button>
     </li>
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-      <svg class="bi me-2 opacity-50" width="1em" height="1em">
-        <use href="#moon-stars-fill"></use>
-      </svg>
-      Cores Escuras
-      <svg class="bi ms-auto d-none" width="1em" height="1em">
-        <use href="#check2"></use>
-      </svg>
-      </button>
-    </li>
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-      <svg class="bi me-2 opacity-50" width="1em" height="1em">
-        <use href="#circle-half"></use>
-      </svg>
-      Automático
-      <svg class="bi ms-auto d-none" width="1em" height="1em">
-        <use href="#check2"></use>
-      </svg>
-      </button>
+    <li class="nav-item text-nowrap">
+      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"> MENU </button>
     </li>
   </ul>
-</div>
-<!-- Fim Acessibilidade cores -->
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="home" viewBox="0 0 16 16">
-    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-  </symbol>
-  <symbol id="speedometer2" viewBox="0 0 16 16">
-    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
-  </symbol>
-  <symbol id="table" viewBox="0 0 16 16">
-    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
-  </symbol>
-  <symbol id="people-circle" viewBox="0 0 16 16">
-    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-  </symbol>
-  <symbol id="grid" viewBox="0 0 16 16">
-    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-  </symbol>
-</svg>
-<main> 
-  
-  <!-- header icones -->
-  
-  <header class="border-bottom text-bg-dark menuicon">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <div class="col-12 col-sm-12 col-xl-2"> <a href="index.html" class="text-decoration-none nav-link text-white">
-          <button><img src="images/logobranco.svg" alt="logo" width="150" > </button>
-          </a> </div>
-        <div class="col-6 col-sm-6 col-xl-2"> <a href="pagina-inicial.html" class="nav-link text-white">
-          <button>
-          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-            <use xlink:href="#home"/>
-          </svg>
-          Página inicial </button>
-          </a> </div>
-        <div class="col-6 col-sm-6 col-xl-2"> <a href="grades-horarias.html" class="nav-link text-white">
-          <button>
-          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-            <use xlink:href="#grid"/>
-          </svg>
-          Grade Horária </button>
-          </a> </div>
-        <div class="col-6 col-sm-6 col-xl-2"> <a href="cadastrar-turma.html" class="nav-link text-white">
-          <button>
-          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-            <use xlink:href="#table"/>
-          </svg>
-          Cadastrar Turmas </button>
-          </a> </div>
-        <div class="col-6 col-sm-6 col-xl-2"> <a href="cadastrar-professores.html" class="nav-link text-white">
-          <button>
-          <svg class="bi d-block mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-          <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
-          <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
-          </svg>
-          Cadastrar Professores </button>
-          </a> </div>
-        <div class="col-12 col-sm-12 col-xl-2">
-          <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
-            <ul class="dropdown-menu text-large">
-              <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
-              <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-              <li><a class="dropdown-item" href="login.html">Login</a></li>
-			<li><a class="dropdown-item" href="faq.html">Precisa de Ajuda?</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="pagina-inicial.html">Pagina Inicial</a></li>
-              <li><a class="dropdown-item" href="grades-horarias.html">Grades Horárias</a></li>
-              <li><a class="dropdown-item" href="cadastrar-professores.html">Cadastro Professores</a></li>
-              <li><a class="dropdown-item" href="cadastrar-turma.html">Cadastro Turma</a></li>
-            </ul>
-          </div>
-        
-      </div></div>
+</header>
+<div class="container-fluid">
+<div class="row">
+<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+  <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel"><img src="images/logo-borda.svg" alt="" width="150px"/></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
-  </header>
-  
-  <!--  --> 
-</main>
-<!-- inicio pagina -->
+    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link active d-flex align-items-center gap-2" href="pagina-inicial.html"> Pagina inicial </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="grades-horarias.html"> Grades Horarias </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="professores.html"> Professores </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="turmas.html"> Turmas </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="faq.html"> Precisa de ajuda? </a> </li>
+      </ul>
+      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase"> <span>Outros linkss</span> <a class="link-secondary" href="#" aria-label="Add a new report"> </a> </h6>
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="cadastro.html"> Cadastro </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="login.html"> Login </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="index.html"> Index </a> </li>
+      </ul>
+      <hr class="my-3">
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> Perfil </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> Sign out </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- inicio pagina --> 
 <br>
-	<div class="pg-grades">
-<div class="container">
-  <h2>Grades horárias Cadastradas</h2>
-  <table width="100%" border="0" class="table table-striped">
-    <tbody>
-      <tr scope="row">
-        <td>ID</td>
-        <td>Nome da Grade</td>
-        <td>Data de Criação</td>
-        <td>Opções</td>
-      </tr>
-      <tr scope="row">
-        <td>1</td>
-        <td>Grade 1</td>
-        <td>20/20/2024</td>
-        <td><a href="#">Editar</a> <a href="#">Duplicar</a> <a href="#">Excluir</a> <a href="#">Salvar</a> <a href="#">Imprimir</a><!-- modal tabela --> 
-          <!-- Button trigger modal -->
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button>
-          
-          <!-- Modal -->
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <table width="100%" border="0">
-                    <tbody>
-                      <tr>
-                        <td>Horáio</td>
-                        <td>Segunda</td>
-                        <td>Terça</td>
-                        <td>Quarta</td>
-                        <td>Quinta</td>
-                        <td>Sexta</td>
-                      </tr>
-                      <tr>
-                        <td><select>
-                            <option selected>08:00</option>
-                            <option>09:00</option>
-                            <option>10:00</option>
-                            <option>11:00</option>
-                            <option>12:00</option>
-                            <option>13:00</option>
-                            <option>14:00</option>
-                            <option>15:00</option>
-                            <option>16:00</option>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
-                            <option>23:00</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td><select>
-                            <option selected>08:00</option>
-                            <option>09:00</option>
-                            <option>10:00</option>
-                            <option>11:00</option>
-                            <option>12:00</option>
-                            <option>13:00</option>
-                            <option>14:00</option>
-                            <option>15:00</option>
-                            <option>16:00</option>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
-                            <option>23:00</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td>Interlalo</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                      </tr>
-                      <tr>
-                        <td><select>
-                            <option selected>08:00</option>
-                            <option>09:00</option>
-                            <option>10:00</option>
-                            <option>11:00</option>
-                            <option>12:00</option>
-                            <option>13:00</option>
-                            <option>14:00</option>
-                            <option>15:00</option>
-                            <option>16:00</option>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
-                            <option>23:00</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td><select>
-                            <option selected>08:00</option>
-                            <option>09:00</option>
-                            <option>10:00</option>
-                            <option>11:00</option>
-                            <option>12:00</option>
-                            <option>13:00</option>
-                            <option>14:00</option>
-                            <option>15:00</option>
-                            <option>16:00</option>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
-                            <option>23:00</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                        <td><select>
-                            <option selected>Professor 1</option>
-                            <option>Professor 2</option>
-                            <option>Professor 3</option>
-                            <option>Professor 4</option>
-                            <option>Professor 5</option>
-                          </select>
-                          <select>
-                            <option selected>Turma 1</option>
-                            <option>Turma 2</option>
-                            <option>Turma 3</option>
-                            <option>Turma 4</option>
-                            <option>Turma 5</option>
-                          </select></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Editar</button>
-                  <button type="button" class="btn btn-primary">Salvar</button>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-              </div>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+<!-- inicio pagina --> 
+<br>
+<div class="horarios">
+  <div class="container">
+    <h2>Grades horárias Cadastradas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome da Grade</th>
+          <th>Data de criação</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="ID">1</td>
+          <td data-label="Nome">Grade 1</td>
+          <td data-label="Data">12/04/2024</td>
+          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+        </tr>
+        <tr>
+          <td data-label="ID">2</td>
+          <td data-label="Nome">Grade 2</td>
+          <td data-label="Data">12/04/2024</td>
+          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+        </tr>
+        <tr>
+          <td data-label="ID">3</td>
+          <td data-label="Nome">Grade 3</td>
+          <td data-label="Data">12/04/2024</td>
+          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="container">
+    <nav class="align-items-center">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <form>
+    <section class="nome">
+      <div class="container">
+        <h2 class="card-title">Criar Grade Horária</h2>
+        <p>Crie sua grade horária aqui</p>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          <div class="input-group flex-nowrap"> <span class="input-group-text" >Nome da Grade</span>
+            <input type="text" class="form-control ">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div class="input-group flex-nowrap"> <span class="input-group-text" >Total de horas dia</span>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div class="input-group flex-nowrap"> <span class="input-group-text" >Tempo de intervalo</span>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <section class="turma">
+      <div class="container">
+        <div class="row">
+          <div class="alert alert-light">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+              <label>Escolha as turmas</label>
+              <select id="opcoes1" onchange="adicionarOpcaoSelecionada('opcoes1')">
+                <option value="opcao1">Turma 1</option>
+                <option value="opcao2">Turma 2</option>
+                <option value="opcao3">Turma 3</option>
+              </select>
+            </div>
+            <div id="opcoesSelecionadas1" class="selecionado"></div>
+          </div>
+          <div class="alert alert-light">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+              <label>Escolha os professores</label>
+              <select id="opcoes2" onchange="adicionarOpcaoSelecionada('opcoes2')">
+                <option value="opcao1">Professores 1</option>
+                <option value="opcao2">Professores 2</option>
+                <option value="opcao3">Professores 3</option>
+              </select>
+            </div>
+            <div id="opcoesSelecionadas2" class="selecionado"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="horarios">
+      <div class="container">
+        <h3>Selecione os horarios</h3>
+        <div class="form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="allhour"  >
+          <label class="form-check-label" for="allhour">Todos os horários</label>
+        </div>
+        <br>
+      </div>
+      <div class="container">
+        <div class="row"> 
+          <!-- segunda -->
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado">
+            <div class="form-check check">
+              <input class="form-check-input " type="checkbox" value="" id="segunda">
+              <label class="form-check-label" for="horario1seg"> Segunda </label>
+            </div>
+            <br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario1seg"  >
+              <label class="form-check-label" for="horario1seg">Horario 1</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario2seg"  >
+              <label class="form-check-label" for="horario2seg">Horario 2</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario3seg"  >
+              <label class="form-check-label" for="horario3seg">Horario 3</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario4seg"  >
+              <label class="form-check-label" for="horario4seg">Horario 4</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario5seg"  >
+              <label class="form-check-label" for="horario5seg">Horario 5</label>
             </div>
           </div>
-          
-          <!-- Fim modal tabela --></td>
-      </tr>
-      <tr scope="row">
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr scope="row">
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <nav class="align-items-center">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
-    </ul>
-  </nav>
-</div>
-<br>
-<br>
-<hr>
-<form>
-  <section class="nome">
-    <div class="container">
-      <h2 class="card-title">Criar Grade Horária</h2>
-      <p>Crie sua grade horária aqui</p>
-    </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+            <!-- Terca -->
+            <div class="form-check check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault"> Terça </label>
+            </div>
+            <br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario1ter"  >
+              <label class="form-check-label" for="horario1ter">Horario 1</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario2"  >
+              <label class="form-check-label" for="horario2">Horario 2</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario3ter"  >
+              <label class="form-check-label" for="horario3ter">Horario 3</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario4ter"  >
+              <label class="form-check-label" for="horario4ter">Horario 4</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario5ter"  >
+              <label class="form-check-label" for="horario5ter">Horario 5</label>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+            <!-- quarta -->
+            <div class="form-check check">
+              <input class="form-check-input check" type="checkbox" value="" id="quarta">
+              <label class="form-check-label" for="quarta"> Quarta </label>
+            </div>
+            <br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario1qua"  >
+              <label class="form-check-label" for="horario1qua">Horario 1</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario2qua"  >
+              <label class="form-check-label" for="horario2qua">Horario 2</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario3qua"  >
+              <label class="form-check-label" for="horario3qua">Horario 3</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario4qua"  >
+              <label class="form-check-label" for="horario4qua">Horario 4</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario5qua"  >
+              <label class="form-check-label" for="horario5qua">Horario 5</label>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+            <!-- quinta -->
+            <div class="form-check check">
+              <input class="form-check-input" type="checkbox" value="" id="quinta">
+              <label class="form-check-label" for="quinta"> Quinta</label>
+            </div>
+            <br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario1qui"  >
+              <label class="form-check-label" for="horario1qui">Horario 1</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario2qui"  >
+              <label class="form-check-label" for="horario2qui">Horario 2</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario3qui"  >
+              <label class="form-check-label" for="horario3qui">Horario 3</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario4qui"  >
+              <label class="form-check-label" for="horario4qui">Horario 4</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario5qui"  >
+              <label class="form-check-label" for="horario5qui">Horario 5</label>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+            <!-- Sexta -->
+            <div class="form-check check">
+              <input class="form-check-input check" type="checkbox" value="" id="sexta">
+              <label class="form-check-label" for="quinta">Sexta</label>
+            </div>
+            <br>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario1sex"  >
+              <label class="form-check-label" for="horario1sex">Horario 1</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario2sex"  >
+              <label class="form-check-label" for="horario2sex">Horario 2</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario3sex"  >
+              <label class="form-check-label" for="horario3sex">Horario 3</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario4sex"  >
+              <label class="form-check-label" for="horario4sex">Horario 4</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="horario5sex"  >
+              <label class="form-check-label" for="horario5sex">Horario 5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-lg-4">
-          <div class="form-group">
-            <label class="form-check-label" for="allturnas">
-            <h3>Nome da Grade</h3>
-            </label>
-            <input type="text" class="form-control" id="ngrade" aria-placeholder="Digite o nome da grade">
-          </div>
+        <div class="form-group">
+          <label for="anexarfoto">Anexar Foto</label>
+          <input type="file" class="form-control-file" id="anexarfoto">
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <label class="form-check-label" for="allturnas">
-          <h3>Total de horas por dia</h3>
-          </label>
-          <input type="text" class="form-control" id="nhoras" aria-placeholder="">
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <label class="form-check-label" for="allturnas">
-          <h3>Tempo de intervalo</h3>
-          </label>
-          <input type="text" class="form-control" id="nintervalo" aria-placeholder="">
-        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary col-lg-3 col-sm-3">Gerar Grade</button>
+        <br>
       </div>
     </div>
-  </section>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-lg-6">
-        <section class="turma">
-          <div class="container">
-            <h3>Selecione as turmas</h3>
-            <div class="form-switch">
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="allturnas">
-                <label class="form-check-label" for="allturnas">Todas as turmas </label>
-              </div>
-              <br>
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="turma1">
-                <label class="form-check-label" for="turma1">Turma 1</label>
-              </div>
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="turma2">
-                <label class="form-check-label" for="turma2">Turma 2</label>
-              </div>
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="turma3">
-                <label class="form-check-label " for="turma3">Turma 3</label>
-              </div>
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="turma4"  >
-                <label class="form-check-label " for="turma4">Turma 4</label>
-              </div>
-              <div class="turmas">
-                <input class="form-check-input" type="checkbox" role="switch" id="turma5"  >
-                <label class="form-check-label " for="turma5">Turma 5</label>
-              </div>
-            </div>
-          </div>
-          <!-- form-switch --> 
-          
-        </section>
-      </div>
-      <div class="col-sm-6 col-lg-6">
-        <section class="professores ">
-          <div class="container">
-            <h3>Selecione os Professores</h3>
-            <div class="form-switch">
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="allprofessores">
-                <label class="form-check-label" for="allturnas">Todos os professores</label>
-              </div>
-              <br>
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="professor1">
-                <label class="form-check-label" for="turma1">Professores 1</label>
-              </div>
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="professor2">
-                <label class="form-check-label" for="professor2">Professores 2</label>
-              </div>
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="professor">
-                <label class="form-check-label " for="professor2">Professores 3</label>
-              </div>
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="professor4"  >
-                <label class="form-check-label " for="professor4">Professores 4</label>
-              </div>
-              <div class="professores">
-                <input class="form-check-input" type="checkbox" role="switch" id="professor5"  >
-                <label class="form-check-label " for="professor5">Professores 5</label>
-              </div>
-            </div>
-          </div>
-          <!-- form-switch --> 
-          
-        </section>
-      </div>
-    </div>
-  </div>
-  <section class="horarios">
-    <div class="container">
-      <h3>Selecione os horarios</h3>
-      <div class="form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="allhour"  >
-        <label class="form-check-label" for="allhour">Todos os horários</label>
-      </div>
-      <br>
-    </div>
-    <div class="container">
-      <div class="row"> 
-        <!-- segunda -->
-        <div class="sexta col-4 col-lg-2 col-sm-4">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="segunda">
-            <label class="form-check-label" for="horario1seg"> Segunda </label>
-          </div>
-          <br>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario1seg"  >
-            <label class="form-check-label" for="horario1seg">Horario 1</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario2seg"  >
-            <label class="form-check-label" for="horario2seg">Horario 2</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario3seg"  >
-            <label class="form-check-label" for="horario3seg">Horario 3</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario4seg"  >
-            <label class="form-check-label" for="horario4seg">Horario 4</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario5seg"  >
-            <label class="form-check-label" for="horario5seg">Horario 5</label>
-          </div>
-        </div>
-        <div class="sexta col-4 col-lg-2 col-sm-4"> 
-          <!-- Terca -->
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault"> Terça </label>
-          </div>
-          <br>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario1ter"  >
-            <label class="form-check-label" for="horario1ter">Horario 1</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario2"  >
-            <label class="form-check-label" for="horario2">Horario 2</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario3ter"  >
-            <label class="form-check-label" for="horario3ter">Horario 3</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario4ter"  >
-            <label class="form-check-label" for="horario4ter">Horario 4</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario5ter"  >
-            <label class="form-check-label" for="horario5ter">Horario 5</label>
-          </div>
-        </div>
-        <div class="sexta col-4 col-lg-2 col-sm-4"> 
-          <!-- quarta -->
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="quarta">
-            <label class="form-check-label" for="quarta"> Quarta </label>
-          </div>
-          <br>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario1qua"  >
-            <label class="form-check-label" for="horario1qua">Horario 1</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario2qua"  >
-            <label class="form-check-label" for="horario2qua">Horario 2</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario3qua"  >
-            <label class="form-check-label" for="horario3qua">Horario 3</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario4qua"  >
-            <label class="form-check-label" for="horario4qua">Horario 4</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario5qua"  >
-            <label class="form-check-label" for="horario5qua">Horario 5</label>
-          </div>
-        </div>
-        <div class="sexta col-4 col-lg-2 col-sm-4"> 
-          <!-- quinta -->
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="quinta">
-            <label class="form-check-label" for="quinta"> Quinta</label>
-          </div>
-          <br>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario1qui"  >
-            <label class="form-check-label" for="horario1qui">Horario 1</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario2qui"  >
-            <label class="form-check-label" for="horario2qui">Horario 2</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario3qui"  >
-            <label class="form-check-label" for="horario3qui">Horario 3</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario4qui"  >
-            <label class="form-check-label" for="horario4qui">Horario 4</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario5qui"  >
-            <label class="form-check-label" for="horario5qui">Horario 5</label>
-          </div>
-        </div>
-        <div class="sexta col-4 col-lg-2 col-sm-4"> 
-          <!-- Sexta -->
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="sexta">
-            <label class="form-check-label" for="sexta"> Sexta </label>
-          </div>
-          <br>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario1sex"  >
-            <label class="form-check-label" for="horario1sex">Horario 1</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario2sex"  >
-            <label class="form-check-label" for="horario2sex">Horario 2</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario3sex"  >
-            <label class="form-check-label" for="horario3sex">Horario 3</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario4sex"  >
-            <label class="form-check-label" for="horario4sex">Horario 4</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="horario5sex"  >
-            <label class="form-check-label" for="horario5sex">Horario 5</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="form-group">
-        <label for="anexarfoto">Anexar Foto</label>
-        <input type="file" class="form-control-file" id="anexarfoto">
-      </div>
-      <br>
-      <br>
-      <button type="submit" class="btn btn-primary col-lg-3 col-sm-3">Gerar Grade</button>
-      <br>
-    </div>
-  </div>
-</form>
+  </form>
 </div>
 <!-- fim form --> 
 
-<!-- fim pagina --> 
+<!-- fim pagina -->
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <thead>
+          </thead>
+          <tbody>
+            <tr class="esconder">
+              <td data-label="Horario">Horário</td>
+              <td data-label="Segunda">Segunda</td>
+              <td data-label="Terça">Terça</td>
+              <td data-label="Quarta">Quarta</td>
+              <td data-label="Quinta">Quinta</td>
+              <td data-label="Sexta">Sexta</td>
+            </tr>
+            <tr>
+              <td data-label="Horario" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><form>
+                  <p>Hora Inicial</p>
+                  <label for="hora"></label>
+                  <select id="horain" name="hora">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <label for="minuto"></label>
+                  <select id="minutoin" name="minuto">
+                    <option value="00">00</option>
+                    <option value="05">05</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                  </select>
+                  <p>Hora Final</p>
+                  <label for="hora"></label>
+                  <select id="horafi" name="hora">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <label for="minuto"></label>
+                  <select id="minutofi" name="minuto">
+                    <option value="00">00</option>
+                    <option value="05">05</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                  </select>
+                </form></td>
+              <td data-label="Segunda" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                  <label for="opcoes3">Escolha as Turmas</label>
+                  <select id="opcoes3" onchange="adicionarOpcaoSelecionada('opcoes3')">
+                    <option value="tseg1">Turma 1</option>
+                    <option value="tseg2">Turma 2</option>
+                    <option value="tseg3">Turma 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas3" class="selecionado"></div>
+                </div>
+                <div class="alert alert-light">
+                  <label for="opcoes4">Escolha os professores</label>
+                  <select id="opcoes4" onchange="adicionarOpcaoSelecionada('opcoes4')">
+                    <option value="pseg1">Professores 1</option>
+                    <option value="pseg2">Professores 2</option>
+                    <option value="pseg3">Professores 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas4" class="selecionado"></div>
+                </div></td>
+              <td data-label="Terça" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                  <label for="opcoes5">Escolha as turmas</label>
+                  <select id="opcoes5" onchange="adicionarOpcaoSelecionada('opcoes5')">
+                    <option value="tter1">Turma 1</option>
+                    <option value="tter2">Turma 2</option>
+                    <option value="tter3">Turma 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas5" class="selecionado"></div>
+                </div>
+                <div class="alert alert-light">
+                  <label for="opcoes6">Escolha os professores</label>
+                  <select id="opcoes6" onchange="adicionarOpcaoSelecionada('opcoes6')">
+                    <option value="pter1">Professores 1</option>
+                    <option value="pter2">Professores 2</option>
+                    <option value="pter3">Professores 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas6" class="selecionado"></div>
+                </div></td>
+              <td data-label="Quarta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                  <label for="opcoes7">Escolha as turmas</label>
+                  <select id="opcoes7" onchange="adicionarOpcaoSelecionada('opcoes7')">
+                    <option value="tqua1">Turma 1</option>
+                    <option value="tqua2">Turma 2</option>
+                    <option value="tqua3">Turma 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas7" class="selecionado"></div>
+                </div>
+                <div class="alert alert-light">
+                  <label for="opcoes8">Escolha os professores</label>
+                  <select id="opcoes8" onchange="adicionarOpcaoSelecionada('opcoes8')">
+                    <option value="pqua1">Professor 1</option>
+                    <option value="pqua2">Professor 2</option>
+                    <option value="pqua3">Professor 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas8" class="selecionado"></div>
+                </div></td>
+              <td data-label="Quinta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                  <label for="opcoes9">Escolha as turmas</label>
+                  <select id="opcoes9" onchange="adicionarOpcaoSelecionada('opcoes9')">
+                    <option value="tqui1">Turma 1</option>
+                    <option value="tqui2">Turma 2</option>
+                    <option value="tqui3">Turma 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas9" class="selecionado"></div>
+                </div>
+                <div class="alert alert-light">
+                  <label for="opcoes10">Escolha os professores</label>
+                  <select id="opcoes10" onchange="adicionarOpcaoSelecionada('opcoes10')">
+                    <option value="pqui1">Professor 1</option>
+                    <option value="pqui2">Professor 2</option>
+                    <option value="pqui3">Professor 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas10" class="selecionado"></div>
+                </div></td>
+              <td data-label="Sexta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                  <label for="opcoes11">Escolha as turmas</label>
+                  <select id="opcoes11" onchange="adicionarOpcaoSelecionada('opcoes11')">
+                    <option value="tsex1">Turma 1</option>
+                    <option value="tsex2">Turma 2</option>
+                    <option value="tsex3">Turma 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas11" class="selecionado"></div>
+                </div>
+                <div class="alert alert-light">
+                  <label for="opcoes12">Escolha os professores</label>
+                  <select id="opcoes12" onchange="adicionarOpcaoSelecionada('opcoes12')">
+                    <option value="psex1">Professor 1</option>
+                    <option value="psex2">Professor 2</option>
+                    <option value="psex3">Professor 3</option>
+                  </select>
+                  <div id="opcoesSelecionadas12" class="selecionado"></div>
+                </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Editar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function adicionarOpcaoSelecionada(id) {
+    var select = document.getElementById(id);
+    var idNumber = parseInt(id.match(/\d+/)[0]);
+    var opcoesSelecionadasDiv = document.getElementById("opcoesSelecionadas" + idNumber);
+
+    var opcaoSelecionada = select.options[select.selectedIndex].text;
+
+    // Verifica se a opção já foi selecionada
+    if (opcoesSelecionadasDiv.querySelector(".opcao-selecionada[data-opcao='" + opcaoSelecionada + "']")) {
+        alert("Esta opção já foi selecionada.");
+        return;
+    }
+
+    var novaOpcaoDiv = document.createElement("div");
+    novaOpcaoDiv.textContent = opcaoSelecionada;
+    novaOpcaoDiv.className = "opcao-selecionada";
+    novaOpcaoDiv.setAttribute("data-opcao", opcaoSelecionada);
+
+    var botaoRemover = document.createElement("button");
+    botaoRemover.textContent = "x";
+    botaoRemover.addEventListener("click", function() {
+        opcoesSelecionadasDiv.removeChild(novaOpcaoDiv);
+    });
+
+    novaOpcaoDiv.appendChild(botaoRemover);
+    opcoesSelecionadasDiv.appendChild(novaOpcaoDiv);
+}
+</script> 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
