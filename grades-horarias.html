@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-bs-theme="auto">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script> 
 <script src="js/form-selecao.js"></script>
 </head>
-<body class="pg">
+<body>
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img src="images/logobranco.svg" alt=""/></a>
   <ul class="navbar-nav flex-row d-md-none">
     <li class="nav-item text-nowrap">
@@ -52,485 +52,502 @@
       </ul>
       <hr class="my-3">
       <ul class="nav flex-column mb-auto">
-        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> Perfil </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="perfil.html"> Perfil </a> </li>
         <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> Sign out </a> </li>
       </ul>
     </div>
   </div>
 </div>
-<!-- inicio pagina --> 
 <br>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-
-<!-- inicio pagina --> 
-<br>
-<div class="horarios">
-  <div class="container">
-    <h2>Grades horárias Cadastradas</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome da Grade</th>
-          <th>Data de criação</th>
-          <th>Opções</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="ID">1</td>
-          <td data-label="Nome">Grade 1</td>
-          <td data-label="Data">12/04/2024</td>
-          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
-        </tr>
-        <tr>
-          <td data-label="ID">2</td>
-          <td data-label="Nome">Grade 2</td>
-          <td data-label="Data">12/04/2024</td>
-          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
-        </tr>
-        <tr>
-          <td data-label="ID">3</td>
-          <td data-label="Nome">Grade 3</td>
-          <td data-label="Data">12/04/2024</td>
-          <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> 
+  
+  <!-- inicio pagina --> 
   <br>
-  <div class="container">
-    <nav class="align-items-center">
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
-      </ul>
-    </nav>
-  </div>
-  <br>
-  <br>
-  <hr>
-  <form>
-    <section class="nome">
-      <div class="container">
-        <h2 class="card-title">Criar Grade Horária</h2>
-        <p>Crie sua grade horária aqui</p>
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-          <div class="input-group flex-nowrap"> <span class="input-group-text" >Nome da Grade</span>
-            <input type="text" class="form-control ">
-          </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-          <div class="input-group flex-nowrap"> <span class="input-group-text" >Total de horas dia</span>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-          <div class="input-group flex-nowrap"> <span class="input-group-text" >Tempo de intervalo</span>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-    </section>
-    <br>
-    <section class="turma">
-      <div class="container">
-        <div class="row">
-          <div class="alert alert-light">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-              <label>Escolha as turmas</label>
-              <select id="opcoes1" onchange="adicionarOpcaoSelecionada('opcoes1')">
-                <option value="opcao1">Turma 1</option>
-                <option value="opcao2">Turma 2</option>
-                <option value="opcao3">Turma 3</option>
-              </select>
-            </div>
-            <div id="opcoesSelecionadas1" class="selecionado"></div>
-          </div>
-          <div class="alert alert-light">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-              <label>Escolha os professores</label>
-              <select id="opcoes2" onchange="adicionarOpcaoSelecionada('opcoes2')">
-                <option value="opcao1">Professores 1</option>
-                <option value="opcao2">Professores 2</option>
-                <option value="opcao3">Professores 3</option>
-              </select>
-            </div>
-            <div id="opcoesSelecionadas2" class="selecionado"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="horarios">
-      <div class="container">
-        <h3>Selecione os horarios</h3>
-        <div class="form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="allhour"  >
-          <label class="form-check-label" for="allhour">Todos os horários</label>
-        </div>
-        <br>
-      </div>
-      <div class="container">
-        <div class="row"> 
-          <!-- segunda -->
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado">
-            <div class="form-check check">
-              <input class="form-check-input " type="checkbox" value="" id="segunda">
-              <label class="form-check-label" for="horario1seg"> Segunda </label>
-            </div>
-            <br>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario1seg"  >
-              <label class="form-check-label" for="horario1seg">Horario 1</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario2seg"  >
-              <label class="form-check-label" for="horario2seg">Horario 2</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario3seg"  >
-              <label class="form-check-label" for="horario3seg">Horario 3</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario4seg"  >
-              <label class="form-check-label" for="horario4seg">Horario 4</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario5seg"  >
-              <label class="form-check-label" for="horario5seg">Horario 5</label>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
-            <!-- Terca -->
-            <div class="form-check check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault"> Terça </label>
-            </div>
-            <br>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario1ter"  >
-              <label class="form-check-label" for="horario1ter">Horario 1</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario2"  >
-              <label class="form-check-label" for="horario2">Horario 2</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario3ter"  >
-              <label class="form-check-label" for="horario3ter">Horario 3</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario4ter"  >
-              <label class="form-check-label" for="horario4ter">Horario 4</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario5ter"  >
-              <label class="form-check-label" for="horario5ter">Horario 5</label>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
-            <!-- quarta -->
-            <div class="form-check check">
-              <input class="form-check-input check" type="checkbox" value="" id="quarta">
-              <label class="form-check-label" for="quarta"> Quarta </label>
-            </div>
-            <br>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario1qua"  >
-              <label class="form-check-label" for="horario1qua">Horario 1</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario2qua"  >
-              <label class="form-check-label" for="horario2qua">Horario 2</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario3qua"  >
-              <label class="form-check-label" for="horario3qua">Horario 3</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario4qua"  >
-              <label class="form-check-label" for="horario4qua">Horario 4</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario5qua"  >
-              <label class="form-check-label" for="horario5qua">Horario 5</label>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
-            <!-- quinta -->
-            <div class="form-check check">
-              <input class="form-check-input" type="checkbox" value="" id="quinta">
-              <label class="form-check-label" for="quinta"> Quinta</label>
-            </div>
-            <br>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario1qui"  >
-              <label class="form-check-label" for="horario1qui">Horario 1</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario2qui"  >
-              <label class="form-check-label" for="horario2qui">Horario 2</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario3qui"  >
-              <label class="form-check-label" for="horario3qui">Horario 3</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario4qui"  >
-              <label class="form-check-label" for="horario4qui">Horario 4</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario5qui"  >
-              <label class="form-check-label" for="horario5qui">Horario 5</label>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
-            <!-- Sexta -->
-            <div class="form-check check">
-              <input class="form-check-input check" type="checkbox" value="" id="sexta">
-              <label class="form-check-label" for="quinta">Sexta</label>
-            </div>
-            <br>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario1sex"  >
-              <label class="form-check-label" for="horario1sex">Horario 1</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario2sex"  >
-              <label class="form-check-label" for="horario2sex">Horario 2</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario3sex"  >
-              <label class="form-check-label" for="horario3sex">Horario 3</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario4sex"  >
-              <label class="form-check-label" for="horario4sex">Horario 4</label>
-            </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="horario5sex"  >
-              <label class="form-check-label" for="horario5sex">Horario 5</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="horarios">
+    <div class="container">
+      <h2>Grades horárias Cadastradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome da Grade</th>
+            <th>Data de criação</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="ID">1</td>
+            <td data-label="Nome">Grade 1</td>
+            <td data-label="Data">12/04/2024</td>
+            <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+          </tr>
+          <tr>
+            <td data-label="ID">2</td>
+            <td data-label="Nome">Grade 2</td>
+            <td data-label="Data">12/04/2024</td>
+            <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+          </tr>
+          <tr>
+            <td data-label="ID">3</td>
+            <td data-label="Nome">Grade 3</td>
+            <td data-label="Data">12/04/2024</td>
+            <td data-label="Opçoes"><a href="#" class="btn btn-outline-secondary">Editar</a> <a href="#" class="btn btn-outline-secondary">Duplicar</a> <a href="#" class="btn btn-outline-secondary">Excluir</a> <a href="#" class="btn btn-outline-secondary">Salvar</a> <a href="#" class="btn btn-outline-secondary">Imprimir</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Visualizar </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br>
     <div class="container">
-      <div class="row">
-        <div class="form-group">
-          <label for="anexarfoto">Anexar Foto</label>
-          <input type="file" class="form-control-file" id="anexarfoto">
-        </div>
-        <br>
-        <br>
-        <button type="submit" class="btn btn-primary col-lg-3 col-sm-3">Gerar Grade</button>
-        <br>
-      </div>
+      <nav class="align-items-center">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Posterior</a></li>
+        </ul>
+      </nav>
     </div>
-  </form>
-</div>
-<!-- fim form --> 
-
-<!-- fim pagina -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <br>
+    <br>
+    <hr>
+    <form>
+      <section class="nome">
+        <div class="container">
+          <h2 class="card-title">Criar Grade Horária</h2>
+          <p>Crie sua grade horária aqui</p>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="input-group flex-nowrap"> <span class="input-group-text" >Nome da Grade</span>
+              <input type="text" class="form-control ">
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="input-group flex-nowrap"> <span class="input-group-text" >Total de horas dia</span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="input-group flex-nowrap"> <span class="input-group-text" >Tempo de intervalo</span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <section class="turma">
+        <div class="container">
+          <div class="row">
+            <div class="alert alert-light">
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <label>Escolha as turmas</label>
+                <select id="opcoes1" onchange="adicionarOpcaoSelecionada('opcoes1')">
+                  <option value="opcao1">Turma 1</option>
+                  <option value="opcao2">Turma 2</option>
+                  <option value="opcao3">Turma 3</option>
+                </select>
+              </div>
+              <div id="opcoesSelecionadas1" class="selecionado"></div>
+            </div>
+            <div class="alert alert-light">
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                <label>Escolha os professores</label>
+                <select id="opcoes2" onchange="adicionarOpcaoSelecionada('opcoes2')">
+                  <option value="opcao1">Professores 1</option>
+                  <option value="opcao2">Professores 2</option>
+                  <option value="opcao3">Professores 3</option>
+                </select>
+              </div>
+              <div id="opcoesSelecionadas2" class="selecionado"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="horarios">
+        <div class="container">
+          <h3>Selecione os horarios</h3>
+          <div class="form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="allhour"  >
+            <label class="form-check-label" for="allhour">Todos os horários</label>
+          </div>
+          <br>
+        </div>
+        <div class="container">
+          <div class="row"> 
+            <!-- segunda -->
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado">
+              <div class="form-check check">
+                <input class="form-check-input " type="checkbox" value="" id="segunda">
+                <label class="form-check-label" for="horario1seg"> Segunda </label>
+              </div>
+              <br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario1seg"  >
+                <label class="form-check-label" for="horario1seg">Horario 1</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario2seg"  >
+                <label class="form-check-label" for="horario2seg">Horario 2</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario3seg"  >
+                <label class="form-check-label" for="horario3seg">Horario 3</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario4seg"  >
+                <label class="form-check-label" for="horario4seg">Horario 4</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario5seg"  >
+                <label class="form-check-label" for="horario5seg">Horario 5</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+              <!-- Terca -->
+              <div class="form-check check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault"> Terça </label>
+              </div>
+              <br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario1ter"  >
+                <label class="form-check-label" for="horario1ter">Horario 1</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario2"  >
+                <label class="form-check-label" for="horario2">Horario 2</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario3ter"  >
+                <label class="form-check-label" for="horario3ter">Horario 3</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario4ter"  >
+                <label class="form-check-label" for="horario4ter">Horario 4</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario5ter"  >
+                <label class="form-check-label" for="horario5ter">Horario 5</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+              <!-- quarta -->
+              <div class="form-check check">
+                <input class="form-check-input check" type="checkbox" value="" id="quarta">
+                <label class="form-check-label" for="quarta"> Quarta </label>
+              </div>
+              <br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario1qua"  >
+                <label class="form-check-label" for="horario1qua">Horario 1</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario2qua"  >
+                <label class="form-check-label" for="horario2qua">Horario 2</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario3qua"  >
+                <label class="form-check-label" for="horario3qua">Horario 3</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario4qua"  >
+                <label class="form-check-label" for="horario4qua">Horario 4</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario5qua"  >
+                <label class="form-check-label" for="horario5qua">Horario 5</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+              <!-- quinta -->
+              <div class="form-check check">
+                <input class="form-check-input" type="checkbox" value="" id="quinta">
+                <label class="form-check-label" for="quinta"> Quinta</label>
+              </div>
+              <br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario1qui"  >
+                <label class="form-check-label" for="horario1qui">Horario 1</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario2qui"  >
+                <label class="form-check-label" for="horario2qui">Horario 2</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario3qui"  >
+                <label class="form-check-label" for="horario3qui">Horario 3</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario4qui"  >
+                <label class="form-check-label" for="horario4qui">Horario 4</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario5qui"  >
+                <label class="form-check-label" for="horario5qui">Horario 5</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 selecionado"> 
+              <!-- Sexta -->
+              <div class="form-check check">
+                <input class="form-check-input check" type="checkbox" value="" id="sexta">
+                <label class="form-check-label" for="quinta">Sexta</label>
+              </div>
+              <br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario1sex"  >
+                <label class="form-check-label" for="horario1sex">Horario 1</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario2sex"  >
+                <label class="form-check-label" for="horario2sex">Horario 2</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario3sex"  >
+                <label class="form-check-label" for="horario3sex">Horario 3</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario4sex"  >
+                <label class="form-check-label" for="horario4sex">Horario 4</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="horario5sex"  >
+                <label class="form-check-label" for="horario5sex">Horario 5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="form-group">
+            <label for="anexarfoto">Anexar Foto</label>
+            <input type="file" class="form-control-file" id="anexarfoto">
+          </div>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary col-lg-3 col-sm-3">Gerar Grade</button>
+          <br>
+        </div>
       </div>
-      <div class="modal-body">
-        <table>
-          <thead>
-          </thead>
-          <tbody>
-            <tr class="esconder">
-              <td data-label="Horario">Horário</td>
-              <td data-label="Segunda">Segunda</td>
-              <td data-label="Terça">Terça</td>
-              <td data-label="Quarta">Quarta</td>
-              <td data-label="Quinta">Quinta</td>
-              <td data-label="Sexta">Sexta</td>
-            </tr>
-            <tr>
-              <td data-label="Horario" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><form>
-                  <p>Hora Inicial</p>
-                  <label for="hora"></label>
-                  <select id="horain" name="hora">
-                    <option value="00">00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                  <label for="minuto"></label>
-                  <select id="minutoin" name="minuto">
-                    <option value="00">00</option>
-                    <option value="05">05</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                    <option value="35">35</option>
-                    <option value="40">40</option>
-                    <option value="45">45</option>
-                    <option value="50">50</option>
-                    <option value="55">55</option>
-                  </select>
-                  <p>Hora Final</p>
-                  <label for="hora"></label>
-                  <select id="horafi" name="hora">
-                    <option value="00">00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                  <label for="minuto"></label>
-                  <select id="minutofi" name="minuto">
-                    <option value="00">00</option>
-                    <option value="05">05</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                    <option value="35">35</option>
-                    <option value="40">40</option>
-                    <option value="45">45</option>
-                    <option value="50">50</option>
-                    <option value="55">55</option>
-                  </select>
-                </form></td>
-              <td data-label="Segunda" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
-                  <label for="opcoes3">Escolha as Turmas</label>
-                  <select id="opcoes3" onchange="adicionarOpcaoSelecionada('opcoes3')">
-                    <option value="tseg1">Turma 1</option>
-                    <option value="tseg2">Turma 2</option>
-                    <option value="tseg3">Turma 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas3" class="selecionado"></div>
-                </div>
-                <div class="alert alert-light">
-                  <label for="opcoes4">Escolha os professores</label>
-                  <select id="opcoes4" onchange="adicionarOpcaoSelecionada('opcoes4')">
-                    <option value="pseg1">Professores 1</option>
-                    <option value="pseg2">Professores 2</option>
-                    <option value="pseg3">Professores 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas4" class="selecionado"></div>
-                </div></td>
-              <td data-label="Terça" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
-                  <label for="opcoes5">Escolha as turmas</label>
-                  <select id="opcoes5" onchange="adicionarOpcaoSelecionada('opcoes5')">
-                    <option value="tter1">Turma 1</option>
-                    <option value="tter2">Turma 2</option>
-                    <option value="tter3">Turma 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas5" class="selecionado"></div>
-                </div>
-                <div class="alert alert-light">
-                  <label for="opcoes6">Escolha os professores</label>
-                  <select id="opcoes6" onchange="adicionarOpcaoSelecionada('opcoes6')">
-                    <option value="pter1">Professores 1</option>
-                    <option value="pter2">Professores 2</option>
-                    <option value="pter3">Professores 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas6" class="selecionado"></div>
-                </div></td>
-              <td data-label="Quarta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
-                  <label for="opcoes7">Escolha as turmas</label>
-                  <select id="opcoes7" onchange="adicionarOpcaoSelecionada('opcoes7')">
-                    <option value="tqua1">Turma 1</option>
-                    <option value="tqua2">Turma 2</option>
-                    <option value="tqua3">Turma 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas7" class="selecionado"></div>
-                </div>
-                <div class="alert alert-light">
-                  <label for="opcoes8">Escolha os professores</label>
-                  <select id="opcoes8" onchange="adicionarOpcaoSelecionada('opcoes8')">
-                    <option value="pqua1">Professor 1</option>
-                    <option value="pqua2">Professor 2</option>
-                    <option value="pqua3">Professor 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas8" class="selecionado"></div>
-                </div></td>
-              <td data-label="Quinta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
-                  <label for="opcoes9">Escolha as turmas</label>
-                  <select id="opcoes9" onchange="adicionarOpcaoSelecionada('opcoes9')">
-                    <option value="tqui1">Turma 1</option>
-                    <option value="tqui2">Turma 2</option>
-                    <option value="tqui3">Turma 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas9" class="selecionado"></div>
-                </div>
-                <div class="alert alert-light">
-                  <label for="opcoes10">Escolha os professores</label>
-                  <select id="opcoes10" onchange="adicionarOpcaoSelecionada('opcoes10')">
-                    <option value="pqui1">Professor 1</option>
-                    <option value="pqui2">Professor 2</option>
-                    <option value="pqui3">Professor 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas10" class="selecionado"></div>
-                </div></td>
-              <td data-label="Sexta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
-                  <label for="opcoes11">Escolha as turmas</label>
-                  <select id="opcoes11" onchange="adicionarOpcaoSelecionada('opcoes11')">
-                    <option value="tsex1">Turma 1</option>
-                    <option value="tsex2">Turma 2</option>
-                    <option value="tsex3">Turma 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas11" class="selecionado"></div>
-                </div>
-                <div class="alert alert-light">
-                  <label for="opcoes12">Escolha os professores</label>
-                  <select id="opcoes12" onchange="adicionarOpcaoSelecionada('opcoes12')">
-                    <option value="psex1">Professor 1</option>
-                    <option value="psex2">Professor 2</option>
-                    <option value="psex3">Professor 3</option>
-                  </select>
-                  <div id="opcoesSelecionadas12" class="selecionado"></div>
-                </div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Editar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+    </form>
+  </div>
+  <!-- fim form --> 
+  
+  <!-- fim pagina -->
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modaltabela" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modaltabela">Nome da tabela</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table>
+            <thead>
+            </thead>
+            <tbody>
+              <tr class="esconder">
+                <td data-label="Horario">Horário</td>
+                <td data-label="Segunda">Segunda</td>
+                <td data-label="Terça">Terça</td>
+                <td data-label="Quarta">Quarta</td>
+                <td data-label="Quinta">Quinta</td>
+                <td data-label="Sexta">Sexta</td>
+              </tr>
+              <tr>
+                <td data-label="Horario" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><form>
+                    <p>Hora Inicial</p>
+                    <label for="hora"></label>
+                    <select id="horain" name="hora">
+                      <option value="00">00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <label for="minuto"></label>
+                    <select id="minutoin" name="minuto">
+                      <option value="00">00</option>
+                      <option value="05">05</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                      <option value="25">25</option>
+                      <option value="30">30</option>
+                      <option value="35">35</option>
+                      <option value="40">40</option>
+                      <option value="45">45</option>
+                      <option value="50">50</option>
+                      <option value="55">55</option>
+                    </select>
+                    <p>Hora Final</p>
+                    <label for="hora"></label>
+                    <select id="horafi" name="hora">
+                      <option value="00">00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <label for="minuto"></label>
+                    <select id="minutofi" name="minuto">
+                      <option value="00">00</option>
+                      <option value="05">05</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                      <option value="25">25</option>
+                      <option value="30">30</option>
+                      <option value="35">35</option>
+                      <option value="40">40</option>
+                      <option value="45">45</option>
+                      <option value="50">50</option>
+                      <option value="55">55</option>
+                    </select>
+                  </form></td>
+                <td data-label="Segunda" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                    <label for="opcoes3">Escolha as Turmas</label>
+                    <select id="opcoes3" onchange="adicionarOpcaoSelecionada('opcoes3')">
+                      <option value="tseg1">Turma 1</option>
+                      <option value="tseg2">Turma 2</option>
+                      <option value="tseg3">Turma 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas3" class="selecionado"></div>
+                  </div>
+                  <div class="alert alert-light">
+                    <label for="opcoes4">Escolha os professores</label>
+                    <select id="opcoes4" onchange="adicionarOpcaoSelecionada('opcoes4')">
+                      <option value="pseg1">Professores 1</option>
+                      <option value="pseg2">Professores 2</option>
+                      <option value="pseg3">Professores 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas4" class="selecionado"></div>
+                  </div></td>
+                <td data-label="Terça" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                    <label for="opcoes5">Escolha as turmas</label>
+                    <select id="opcoes5" onchange="adicionarOpcaoSelecionada('opcoes5')">
+                      <option value="tter1">Turma 1</option>
+                      <option value="tter2">Turma 2</option>
+                      <option value="tter3">Turma 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas5" class="selecionado"></div>
+                  </div>
+                  <div class="alert alert-light">
+                    <label for="opcoes6">Escolha os professores</label>
+                    <select id="opcoes6" onchange="adicionarOpcaoSelecionada('opcoes6')">
+                      <option value="pter1">Professores 1</option>
+                      <option value="pter2">Professores 2</option>
+                      <option value="pter3">Professores 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas6" class="selecionado"></div>
+                  </div></td>
+                <td data-label="Quarta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                    <label for="opcoes7">Escolha as turmas</label>
+                    <select id="opcoes7" onchange="adicionarOpcaoSelecionada('opcoes7')">
+                      <option value="tqua1">Turma 1</option>
+                      <option value="tqua2">Turma 2</option>
+                      <option value="tqua3">Turma 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas7" class="selecionado"></div>
+                  </div>
+                  <div class="alert alert-light">
+                    <label for="opcoes8">Escolha os professores</label>
+                    <select id="opcoes8" onchange="adicionarOpcaoSelecionada('opcoes8')">
+                      <option value="pqua1">Professor 1</option>
+                      <option value="pqua2">Professor 2</option>
+                      <option value="pqua3">Professor 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas8" class="selecionado"></div>
+                  </div></td>
+                <td data-label="Quinta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                    <label for="opcoes9">Escolha as turmas</label>
+                    <select id="opcoes9" onchange="adicionarOpcaoSelecionada('opcoes9')">
+                      <option value="tqui1">Turma 1</option>
+                      <option value="tqui2">Turma 2</option>
+                      <option value="tqui3">Turma 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas9" class="selecionado"></div>
+                  </div>
+                  <div class="alert alert-light">
+                    <label for="opcoes10">Escolha os professores</label>
+                    <select id="opcoes10" onchange="adicionarOpcaoSelecionada('opcoes10')">
+                      <option value="pqui1">Professor 1</option>
+                      <option value="pqui2">Professor 2</option>
+                      <option value="pqui3">Professor 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas10" class="selecionado"></div>
+                  </div></td>
+                <td data-label="Sexta" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
+                    <label for="opcoes11">Escolha as turmas</label>
+                    <select id="opcoes11" onchange="adicionarOpcaoSelecionada('opcoes11')">
+                      <option value="tsex1">Turma 1</option>
+                      <option value="tsex2">Turma 2</option>
+                      <option value="tsex3">Turma 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas11" class="selecionado"></div>
+                  </div>
+                  <div class="alert alert-light">
+                    <label for="opcoes12">Escolha os professores</label>
+                    <select id="opcoes12" onchange="adicionarOpcaoSelecionada('opcoes12')">
+                      <option value="psex1">Professor 1</option>
+                      <option value="psex2">Professor 2</option>
+                      <option value="psex3">Professor 3</option>
+                    </select>
+                    <div id="opcoesSelecionadas12" class="selecionado"></div>
+                  </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Editar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+	
+
+ 
+  <div class="footer">
+    <footer>
+		<br>
+      <ul class="nav justify-content-center pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
+        <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      </ul>
+      <p class="text-center">© 2024 TurmaTec</p>
+		<br>
+    </footer>
+ 
+	</div>
 <script>
 function adicionarOpcaoSelecionada(id) {
     var select = document.getElementById(id);

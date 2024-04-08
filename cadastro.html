@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-bs-theme="auto">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,69 +12,80 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
-
+	  <body>
 <header class="border-bottom text-bg-dark menuicon">
 
-<div class="container">
-  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3"> <a href="index.html" class="text-decoration-none nav-link text-white">
-      <button><img src="images/logobranco.svg" alt="logo" width="150" > </button>
-      </a> </div>
-    <div class="col-1 col-sm-1 col-md-8 col-lg-8 col-xl-8 col-xxl-8"></div>
-    <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
-      <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
-        <ul class="dropdown-menu text-large">
-          <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
-          <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-          <li><a class="dropdown-item" href="login.html">Login</a></li>
-          <li><a class="dropdown-item" href="faq.html">Precisa de Ajuda?</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="pagina-inicial.html">Pagina Inicial</a></li>
-          <li><a class="dropdown-item" href="grades-horarias.html">Grades Horárias</a></li>
-          <li><a class="dropdown-item" href="professores.html">Cadastro Professores</a></li>
-          <li><a class="dropdown-item" href="turmas.html">Cadastro Turma</a></li>
-        </ul>
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3"> <a href="index.html" class="text-decoration-none nav-link text-white">
+        <button><img src="images/logobranco.svg" alt="logo" width="150" > </button>
+        </a> </div>
+      <div class="col-1 col-sm-1 col-md-8 col-lg-8 col-xl-8 col-xxl-8"></div>
+      <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+        <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
+          <ul class="dropdown-menu text-large">
+            <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="faq.html">Precisa de Ajuda?</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="pagina-inicial.html">Pagina Inicial</a></li>
+            <li><a class="dropdown-item" href="grades-horarias.html">Grades Horárias</a></li>
+            <li><a class="dropdown-item" href="professores.html">Cadastro Professores</a></li>
+            <li><a class="dropdown-item" href="turmas.html">Cadastro Turma</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </header>
 
-
-
-<!-- inicio pagina --> 
+<!-- inicio pagina -->
 <!-- Inicio Pagina Cadastro -->
-	<br>
-	<div class="pgcadastro">
-<div class="container">
-	<h1>Cadastro</h1>
-  <form>
-    <div class="mb-3">
-      <label class="form-label">Digite seu nome</label>
-      <input class="form-control" type="text" placeholder="">
-	  </div>
-		 <div class="mb-3">
-      <label class="form-label">Digite seu e-mail</label>
-      <input type="email" class="form-control" >
-      <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Digite sua senha</label>
-      <input type="password" class="form-control" id="password">
-    </div>
-	  <div class="mb-3">
-	 <label for="anexarfoto">Foto de Perfil</label>
+<br>
+<div class="pgcadastro">
+  <div class="container">
+    <h1>Cadastro</h1>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Digite seu nome</label>
+        <input class="form-control" type="text" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Digite seu e-mail</label>
+        <input type="email" class="form-control" >
+        <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Digite sua senha</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <div class="mb-3">
+        <label for="anexarfoto">Foto de Perfil</label>
         <input type="file" class="form-control-file" id="anexarfoto">
-    </div>
-	  <a href="pagina-inicial.html">
-    <button type="button" class="btn btn-primary">Cadastrar</button>
-	  </a>
-  </form>
+      </div>
+      <a href="pagina-inicial.html">
+      <button type="button" class="btn btn-primary">Cadastrar</button>
+      </a>
+    </form>
+  </div>
 </div>
+
+<div class="footer">
+  <footer><br>
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
+      <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+      <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+    </ul>
+    <p class="text-center">© 2024 TurmaTec</p><br>
+  </footer>
 </div>
-<!-- Fim Pagina Cadastro --> 
+
+<!-- Fim Pagina Cadastro -->
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

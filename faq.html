@@ -1,94 +1,106 @@
 <!doctype html>
-<html lang="pt-BR" data-bs-theme="auto">
+<html lang="pt-BR" >
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>TurmaTec - Cadastro</title>
-<link href="css/sign-in.css" rel="stylesheet">
+<title>TurmaTec - Faq</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
-
-	<body>
-<header class="border-bottom text-bg-dark menuicon">
-
-<div class="container">
-  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3"> <a href="index.html" class="text-decoration-none nav-link text-white">
-      <button><img src="images/logobranco.svg" alt="logo" width="150" > </button>
-      </a> </div>
-    <div class="col-1 col-sm-1 col-md-8 col-lg-8 col-xl-8 col-xxl-8"></div>
-    <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
-      <div class="dropdown text-end"> <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> </a>
-        <ul class="dropdown-menu text-large">
-          <li><a class="dropdown-item" href="cadastro.html">Cadastro</a></li>
-          <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-          <li><a class="dropdown-item" href="login.html">Login</a></li>
-          <li><a class="dropdown-item" href="faq.html">Precisa de Ajuda?</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="pagina-inicial.html">Pagina Inicial</a></li>
-          <li><a class="dropdown-item" href="grades-horarias.html">Grades Horárias</a></li>
-          <li><a class="dropdown-item" href="professores.html">Cadastro Professores</a></li>
-          <li><a class="dropdown-item" href="turmas.html">Cadastro Turma</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+<link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="pg">
+<header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img src="images/logobranco.svg" alt=""/></a>
+  <ul class="navbar-nav flex-row d-md-none">
+    <li class="nav-item text-nowrap">
+      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search"> </button>
+    </li>
+    <li class="nav-item text-nowrap">
+      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"> MENU </button>
+    </li>
+  </ul>
 </header>
-		
-	<div class="pg-grades">
-		<div class="container">
-			<br>
-			<h1>Você precisa de ajuda?</h1>
-			<p>Abaixo você encontra algumas resposta para as dúvidas mais comuns. </p>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+<div class="container-fluid">
+<div class="row">
+<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+  <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel"><img src="images/logo-borda.svg" alt="" width="150px"/></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link active d-flex align-items-center gap-2" href="pagina-inicial.html"> Pagina inicial </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="grades-horarias.html"> Grades Horarias </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="professores.html"> Professores </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="turmas.html"> Turmas </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="faq.html"> Precisa de ajuda? </a> </li>
+      </ul>
+      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase"> <span>Outros linkss</span> <a class="link-secondary" href="#" aria-label="Add a new report"> </a> </h6>
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="cadastro.html"> Cadastro </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="login.html"> Login </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="index.html"> Index </a> </li>
+      </ul>
+      <hr class="my-3">
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="perfil.html"> Perfil </a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> Sign out </a> </li>
+      </ul>
     </div>
   </div>
 </div>
+<!-- inicio pagina --> 
+<br>
+<div class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> <br>
+  <div class="container"> <br>
+    <h1>Você precisa de ajuda?</h1>
+    <p>Abaixo você encontra algumas resposta para as dúvidas mais comuns. </p>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Como crio uma conta </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body"> <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Como Imprimo minha grade? </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body"> <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Como deleto uma grade horária </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body"> <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- fim pagina --> 
 </div>
-<!-- fim pagina --> 
-
 <script src="js/bootstrap.bundle.min.js"></script>
+<div class="footer">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
+      <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+      <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+    </ul>
+    <p class="text-center">© 2024 TurmaTec</p>
+  </footer>
+</div>
 </body>
 </html>
