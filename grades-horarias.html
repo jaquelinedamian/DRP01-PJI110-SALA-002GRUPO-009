@@ -363,70 +363,12 @@
               </tr>
               <tr>
                 <td data-label="Horario" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><form>
-                    <p>Hora Inicial</p>
-                    <label for="hora"></label>
-                    <select id="horain" name="hora">
-                      <option value="00">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                    </select>
-                    <label for="minuto"></label>
-                    <select id="minutoin" name="minuto">
-                      <option value="00">00</option>
-                      <option value="05">05</option>
-                      <option value="10">10</option>
-                      <option value="15">15</option>
-                      <option value="20">20</option>
-                      <option value="25">25</option>
-                      <option value="30">30</option>
-                      <option value="35">35</option>
-                      <option value="40">40</option>
-                      <option value="45">45</option>
-                      <option value="50">50</option>
-                      <option value="55">55</option>
-                    </select>
-                    <p>Hora Final</p>
-                    <label for="hora"></label>
-                    <select id="horafi" name="hora">
-                      <option value="00">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                    </select>
-                    <label for="minuto"></label>
-                    <select id="minutofi" name="minuto">
-                      <option value="00">00</option>
-                      <option value="05">05</option>
-                      <option value="10">10</option>
-                      <option value="15">15</option>
-                      <option value="20">20</option>
-                      <option value="25">25</option>
-                      <option value="30">30</option>
-                      <option value="35">35</option>
-                      <option value="40">40</option>
-                      <option value="45">45</option>
-                      <option value="50">50</option>
-                      <option value="55">55</option>
-                    </select>
+                    <div class="justify-content-center">
+                      <h3>Horário 1 </h3>
+                      <label>Horário inicia e final</label>
+                      <br>
+                      <input type="text" placeholder="08:00 - 09:00">
+                    </div>
                   </form></td>
                 <td data-label="Segunda" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"><div class="alert alert-light">
                     <label for="opcoes3">Escolha as Turmas</label>
@@ -531,23 +473,18 @@
     </div>
   </div>
 </div>
-	
-
- 
-  <div class="footer">
-    <footer>
-		<br>
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
-        <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      </ul>
-      <p class="text-center">© 2024 TurmaTec</p>
-		<br>
-    </footer>
- 
-	</div>
+<div class="footer">
+  <footer> <br>
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
+      <li class="nav-item"><a href="cadastro.html" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+      <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+    </ul>
+    <p class="text-center">© 2024 TurmaTec</p>
+    <br>
+  </footer>
+</div>
 <script>
 function adicionarOpcaoSelecionada(id) {
     var select = document.getElementById(id);
