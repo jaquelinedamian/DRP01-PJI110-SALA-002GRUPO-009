@@ -1,17 +1,21 @@
 <!doctype html>
-<html lang="pt-BR" >
+<html lang="pt-BR" data-bs-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Alunos Univesp">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>TurmaTec - Cadastro</title>
+<title>TurmaTec - Vamos começar?</title>
 <link rel="stylesheet" href="css/css@3">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/customstyle.css" rel="stylesheet">
 <link href="css/headers.css" rel="stylesheet">
 <link href="css/dashboard.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script> 
+<script src="js/form-selecao.js"></script>
 </head>
 <body>
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#"><img src="images/logobranco.svg" alt=""/></a>
@@ -57,38 +61,33 @@
 <!-- inicio pagina --> 
 <br>
 <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<!-- Inicio Pagina Cadastro --> 
-<br>
-<div class="pgcadastro">
-  <div class="container">
-    <h1>Cadastro</h1>
-    <form>
-      <div class="mb-3">
-        <label class="form-label">Digite seu nome</label>
-        <input class="form-control" type="text" placeholder="">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Digite seu e-mail</label>
-        <input type="email" class="form-control" >
-        <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Digite sua senha</label>
-        <input type="password" class="form-control" id="password">
-      </div>
-      <div class="mb-3">
-        <label for="anexarfoto">Foto de Perfil</label>
-        <input type="file" class="form-control-file" id="anexarfoto">
-      </div>
-      <a href="pos-cadastro.html">
-      <button type="button" class="btn btn-primary">Cadastrar</button>
-      </a>
-    </form>
+<div class="pginicial">
+<div class="container"> <br>
+  <div class="alert badge d-flex align-items-center p-1 pe-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle ">
+    <h1>Você não possui grades horárias cadastradas</h1>
+  </div>
+  <br>
+  <h2>Para começar a gerar suas grades horárias, você precisa seguir os passos abaixo</h2>
+  <br>
+  <div class="row mb-3 ">
+    <div class="col-4 themed-grid-col">
+      <h4>Passo 1</h4>
+      <h2>Cadastre seus professores </h2>
+    </div>
+    <div class="col-4 themed-grid-col">
+      <h4>Passo 2</h4>
+      <h2>Cadastre suas turmas</h2>
+    </div>
+    <div class="col-4 themed-grid-col">
+      <h4>Passo 3</h4>
+      <h2>Gere sua grade Horária</h2>
+    </div>
   </div>
 </div>
-	</div>
+	</div></div>
+<script src="js/bootstrap.bundle.min.js"></script>
 <div class="footer">
-  <footer><br>
+  <footer class="py-3 my-4">
     <ul class="nav justify-content-center pb-3 mb-3">
       <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
       <li class="nav-item"><a href="login.html" class="nav-link px-2 text-body-secondary">Login</a></li>
@@ -96,11 +95,7 @@
       <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
     </ul>
     <p class="text-center">© 2024 TurmaTec</p>
-    <br>
   </footer>
 </div>
-
-<!-- Fim Pagina Cadastro --> 
-<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
